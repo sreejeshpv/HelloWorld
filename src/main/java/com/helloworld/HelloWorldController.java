@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class HelloWorldController {
 	
-	@GetMapping(value= "")
+	@GetMapping(value= "/test")
 	public String sayHello(@RequestParam(required = false,name = "name") Optional<String> name) {
 		return "Hello "+name.orElse("missing");
 	}
